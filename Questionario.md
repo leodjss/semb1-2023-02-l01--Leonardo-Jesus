@@ -2,6 +2,8 @@
 
 ## 1. Explique brevemente o que é compilação cruzada (***cross-compiling***) e para que ela serve.
 
+Resposta: 
+
 ## 2. O que é um código de inicialização ou ***startup*** e qual sua finalidade?
 
 ## 3. Sobre o utilitário **make** e o arquivo **Makefile responda**:
