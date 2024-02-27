@@ -41,6 +41,64 @@ void debugmon_handler  (void) __attribute__ ((weak, alias("default_handler")));
 void pendsv_handler    (void) __attribute__ ((weak, alias("default_handler")));
 void systick_handler   (void) __attribute__ ((weak, alias("default_handler")));
 
+void WWDG_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void PVD_handler              (void) __attribute__ ((weak, alias("default_handler")));
+void TAMPSTAMP_handler        (void) __attribute__ ((weak, alias("default_handler")));
+void RTCWKUP_handler          (void) __attribute__ ((weak, alias("default_handler")));
+void FLASH_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void RCC_handler              (void) __attribute__ ((weak, alias("default_handler")));
+void EXTI0_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void EXTI1_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void EXTI2_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void EXTI3_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void EXTI4_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream0_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream1_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream2_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream3_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream4_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream5_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream6_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void ADC_handler              (void) __attribute__ ((weak, alias("default_handler")));
+void EXTI9_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void TIM1BRKTIM9_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void TIM1UPTIM10_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void TIM1TRGCOMTIM11_handler  (void) __attribute__ ((weak, alias("default_handler")));
+void TIM1CC_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void TIM2_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void TIM3_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void TIM4_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void I2C1EV_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void I2C1ER_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void I2C2EV_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void I2C2ER_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void SPI1_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void SPI2_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void USART1_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void USART2_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void EXTI1510_handler         (void) __attribute__ ((weak, alias("default_handler")));
+void RTCAlarm_handler         (void) __attribute__ ((weak, alias("default_handler")));
+void OTGFSWKUP_handler        (void) __attribute__ ((weak, alias("default_handler")));
+void DMA1Stream7_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void SDIO_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void TIM5_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void SPI3_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream0_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream1_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream2_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream3_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream4_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void OTGFS_handler            (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream5_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream6_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void DMA2Stream7_handler      (void) __attribute__ ((weak, alias("default_handler")));
+void USART6_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void I2C3EV_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void I2C3ER_handler           (void) __attribute__ ((weak, alias("default_handler")));
+void FPU_handler              (void) __attribute__ ((weak, alias("default_handler")));
+void SPI4_handler             (void) __attribute__ ((weak, alias("default_handler")));
+void SPI5_handler             (void) __attribute__ ((weak, alias("default_handler")));
+
  /****************************************************************************
  * External Data
  ****************************************************************************/
@@ -78,6 +136,63 @@ uint32_t vectors[] __attribute__((section(".isr_vectors"))) =
   0,                                      /* 0x0000 0034 */
   (uint32_t)pendsv_handler,               /* 0x0000 0038 */
   (uint32_t)systick_handler,              /* 0x0000 003c */
+  (uint32_t)WWDG_handler,                 /* 0x0000 0040 */
+  (uint32_t)PVD_handler,                  /* 0x0000 0044 */
+  (uint32_t)TAMPSTAMP_handler,            /* 0x0000 0048 */
+  (uint32_t)RTCWKUP_handler,              /* 0x0000 004c */
+  (uint32_t)FLASH_handler,                /* 0x0000 0050 */
+  (uint32_t)RCC_handler,                  /* 0x0000 0054 */
+  (uint32_t)EXTI0_handler,                /* 0x0000 0058 */
+  (uint32_t)EXTI1_handler,                /* 0x0000 005c */
+  (uint32_t)EXTI2_handler,                /* 0x0000 0060 */
+  (uint32_t)EXTI3_handler,                /* 0x0000 0064 */
+  (uint32_t)EXTI4_handler,                /* 0x0000 0068 */
+  (uint32_t)DMA1Stream0_handler,          /* 0x0000 006c */
+  (uint32_t)DMA1Stream1_handler,          /* 0x0000 0070 */
+  (uint32_t)DMA1Stream2_handler,          /* 0x0000 0074 */
+  (uint32_t)DMA1Stream3_handler,          /* 0x0000 0078 */
+  (uint32_t)DMA1Stream4_handler,          /* 0x0000 007c */
+  (uint32_t)DMA1Stream5_handler,          /* 0x0000 0080 */
+  (uint32_t)DMA1Stream6_handler,          /* 0x0000 0084 */
+  (uint32_t)ADC_handler,                  /* 0x0000 0088 */
+  (uint32_t)EXTI9_handler,                /* 0x0000 009c */
+  (uint32_t)TIM1BRKTIM9_handler,          /* 0x0000 00A0 */
+  (uint32_t)TIM1UPTIM10_handler,          /* 0x0000 00A4 */
+  (uint32_t)TIM1TRGCOMTIM11_handler,      /* 0x0000 00A8 */
+  (uint32_t)TIM1CC_handler,               /* 0x0000 00Ac */
+  (uint32_t)TIM2_handler,                 /* 0x0000 00B0 */
+  (uint32_t)TIM3_handler,                 /* 0x0000 00B4 */
+  (uint32_t)TIM4_handler,                 /* 0x0000 00B8 */
+  (uint32_t)I2C1EV_handler,               /* 0x0000 00Bc */
+  (uint32_t)I2C1ER_handler,               /* 0x0000 00C0 */
+  (uint32_t)I2C2EV_handler,               /* 0x0000 00C4 */
+  (uint32_t)I2C2ER_handler,               /* 0x0000 00C8 */
+  (uint32_t)SPI1_handler,                 /* 0x0000 00Cc */
+  (uint32_t)SPI2_handler,                 /* 0x0000 00D0 */
+  (uint32_t)USART1_handler,               /* 0x0000 00D4 */
+  (uint32_t)USART2_handler,               /* 0x0000 00D8 */
+  (uint32_t)EXTI1510_handler,             /* 0x0000 00E0 */
+  (uint32_t)RTCAlarm_handler,             /* 0x0000 00E4 */
+  (uint32_t)OTGFSWKUP_handler,            /* 0x0000 00E8 */
+  (uint32_t)DMA1Stream7_handler,          /* 0x0000 00FC */
+  (uint32_t)SDIO_handler,                 /* 0x0000 0104 */
+  (uint32_t)TIM5_handler,                 /* 0x0000 0108 */
+  (uint32_t)SPI3_handler,                 /* 0x0000 010c */
+  (uint32_t)DMA2Stream0_handler,          /* 0x0000 0120 */
+  (uint32_t)DMA2Stream1_handler,          /* 0x0000 0124 */
+  (uint32_t)DMA2Stream2_handler,          /* 0x0000 0128 */
+  (uint32_t)DMA2Stream3_handler,          /* 0x0000 012c */
+  (uint32_t)DMA2Stream4_handler,          /* 0x0000 0130 */
+  (uint32_t)OTGFS_handler,                /* 0x0000 014c */
+  (uint32_t)DMA2Stream5_handler,          /* 0x0000 0150 */
+  (uint32_t)DMA2Stream6_handler,          /* 0x0000 0154 */
+  (uint32_t)DMA2Stream7_handler,          /* 0x0000 0158 */
+  (uint32_t)USART6_handler,               /* 0x0000 015c */
+  (uint32_t)I2C3EV_handler,               /* 0x0000 0160 */
+  (uint32_t)I2C3ER_handler,               /* 0x0000 0164 */
+  (uint32_t)FPU_handler,                  /* 0x0000 0184 */
+  (uint32_t)SPI4_handler,                 /* 0x0000 0190 */
+  (uint32_t)SPI5_handler,                 /* 0x0000 0194 */
 };
 
 /****************************************************************************
